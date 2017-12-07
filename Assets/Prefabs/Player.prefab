@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 198945199640377164}
   - component: {fileID: 199966672659103448}
   m_Layer: 0
-  m_Name: Plasma
-  m_TagString: Untagged
+  m_Name: PlasmaR
+  m_TagString: Guns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 199029565185577308}
   m_Layer: 0
   m_Name: Plasma (1)
-  m_TagString: Untagged
+  m_TagString: Guns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3643,7 +3643,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1656555534
+  randomSeed: 1115034550
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -6960,7 +6960,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -178582450
+  randomSeed: -1147990883
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4574340732480088}
   - component: {fileID: 33450812599615484}
   - component: {fileID: 23751793944017676}
+  - component: {fileID: 114228380383574662}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -34,13 +35,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130390565401632}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.04353298, z: -0, w: 0.99905205}
+  m_LocalPosition: {x: 7.44, y: 11.6, z: -240}
+  m_LocalScale: {x: 5.267598, y: 5.2676005, z: 5.2676005}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -4.9900002, z: 0}
 --- !u!23 &23751793944017676
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -82,3 +83,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1130390565401632}
   m_Mesh: {fileID: 4300008, guid: 6c11e79470dad4b4bb66b279d2660007, type: 3}
+--- !u!114 &114228380383574662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1130390565401632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e7f2c406530b04c9533da52542bf7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1252100180515994, guid: d5bf3c8915ff3e04ba78ca1f2feca9a1, type: 2}

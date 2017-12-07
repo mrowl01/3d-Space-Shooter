@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: eb069917f3ab0c5478e293b5a30224ed
+timeCreated: 1512681763
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kahless Pro
+  fontNames:
+  - Kahless Pro
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

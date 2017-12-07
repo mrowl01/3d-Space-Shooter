@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] float controlPitchFactor  = -5f;
 	[SerializeField] float controlRollFactor  = -20;
 
+
+	GameObject[] guns;
 	bool isDead= false;
 
 	float yThrow;
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		
+		guns = GameObject.FindGameObjectsWithTag ("Guns");
 		
 	}
 	
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour {
 		if (!isDead) {
 			movement ();
 			ProcessRotation ();
+			ProcessFiring ();
 		}
 	}
 	void movement ()
@@ -78,6 +81,31 @@ public class PlayerController : MonoBehaviour {
 		//Called by string reference in collision Handler
 		print("Controls frozen");
 		isDead = true; 
+	}
+	void ProcessFiring ()
+	{
+		if (CrossPlatformInputManager.GetButton ("Fire1")) 
+		{
+			ActivateGuns ();
+		} else
+		{
+			DeactivateGunz ();
+		}
+			
+	}
+	void ActivateGuns()
+	{
+		foreach (GameObject Guns in guns)
+		{
+			Guns.SetActive (true);
+		}
+	}
+	void DeactivateGunz()
+	{
+		foreach (GameObject Guns in guns)
+		{
+			Guns.SetActive (false);
+		}
 	}
 
 }
