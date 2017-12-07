@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneBoss : MonoBehaviour
 {
 
+
 	public void Start ()
 	{
 		if (SceneManager.GetActiveScene ().buildIndex == 0) {

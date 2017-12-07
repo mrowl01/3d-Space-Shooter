@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
+	[Header ("General")]
 	[SerializeField][Range(0,6000)] float speed=4f;
 	[SerializeField]float xRange= 5f;
-	[SerializeField] float yRange=2;
+	[SerializeField] float yRange=5f;
+	[Header("ScreenPosition")]
 	[SerializeField] float positionPitchFactor  = -5f;
-	[SerializeField] float positionYawFactor  = 5f;
-	[SerializeField] float controlPitchFactor  = -20f;
+	[SerializeField] float positionYawFactor  = 10f;
+	[Header("Roll Values")]
+	[SerializeField] float controlPitchFactor  = -5f;
 	[SerializeField] float controlRollFactor  = -20;
+
+	bool isDead= false;
 
 	float yThrow;
 	float yOffset;
@@ -26,8 +31,10 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		movement ();
-		ProcessRotation();
+		if (!isDead) {
+			movement ();
+			ProcessRotation ();
+		}
 	}
 	void movement ()
 	{
@@ -66,4 +73,11 @@ public class Player : MonoBehaviour {
 		float roll = xThrow * controlRollFactor;
 		transform.localRotation = Quaternion.Euler (pitch, yaw, roll);
 	}
+	void OnPlayerDeath()
+	{
+		//Called by string reference in collision Handler
+		print("Controls frozen");
+		isDead = true; 
+	}
+
 }
